@@ -24,7 +24,7 @@
 #define CONFIG_EXAMPLES_DIR "config/examples/AnyCubic/i3 Mega/Trigorilla AVR"
 
 //#define I3MEGA_HAS_BLTOUCH
-//#define I3MEGA_HAS_TMC2208
+#define I3MEGA_HAS_TMC2208
 
 /**
  * Configuration.h
@@ -120,7 +120,7 @@
  * Currently Ethernet (-2) is only supported on Teensy 4.1 boards.
  * :[-2, -1, 0, 1, 2, 3, 4, 5, 6, 7]
  */
-//#define SERIAL_PORT_2 -1
+#define SERIAL_PORT_2 3
 //#define BAUDRATE_2 250000   // :[2400, 9600, 19200, 38400, 57600, 115200, 250000, 500000, 1000000] Enable to override BAUDRATE
 
 /**
@@ -161,7 +161,7 @@
 /**
  * Some Anycubic machines have Z1 and Z2 swapped to save on wiring.
  */
-//#define SWAP_Z_MOTORS
+#define SWAP_Z_MOTORS
 
 // Name displayed in the LCD "Ready" message and Info menu
 #define CUSTOM_MACHINE_NAME "Anycubic i3"
@@ -1680,9 +1680,9 @@
 // @section motion
 
 // Invert the stepper direction. Change (or reverse the motor connector) if an axis goes the wrong way.
-#define INVERT_X_DIR true // set to true for stock drivers or TMC2208 with reversed connectors
-#define INVERT_Y_DIR false // set to false for stock drivers or TMC2208 with reversed connectors
-#define INVERT_Z_DIR false // set to false for stock drivers or TMC2208 with reversed connectors
+#define INVERT_X_DIR false // set to true for stock drivers or TMC2208 with reversed connectors
+#define INVERT_Y_DIR true // set to false for stock drivers or TMC2208 with reversed connectors
+#define INVERT_Z_DIR true // set to false for stock drivers or TMC2208 with reversed connectors
 //#define INVERT_I_DIR false
 //#define INVERT_J_DIR false
 //#define INVERT_K_DIR false
@@ -1693,7 +1693,7 @@
 // @section extruder
 
 // For direct drive extruder v9 set to true, for geared extruder set to false.
-#define INVERT_E0_DIR false
+#define INVERT_E0_DIR true
 #define INVERT_E1_DIR false
 #define INVERT_E2_DIR false
 #define INVERT_E3_DIR false
@@ -3036,7 +3036,7 @@
 //
 // Touch-screen LCD for Anycubic printers
 //
-#define ANYCUBIC_LCD_I3MEGA
+//#define ANYCUBIC_LCD_I3MEGA
 //#define ANYCUBIC_LCD_CHIRON
 #if EITHER(ANYCUBIC_LCD_I3MEGA, ANYCUBIC_LCD_CHIRON)
   #define LCD_SERIAL_PORT 3
@@ -3053,7 +3053,7 @@
 // Third-party or vendor-customized controller interfaces.
 // Sources should be installed in 'src/lcd/extui'.
 //
-#define EXTENSIBLE_UI
+//#define EXTENSIBLE_UI
 
 #if ENABLED(EXTENSIBLE_UI)
   //#define EXTUI_LOCAL_BEEPER // Enables use of local Beeper pin with external display
